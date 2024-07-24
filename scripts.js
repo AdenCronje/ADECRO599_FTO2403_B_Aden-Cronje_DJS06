@@ -32,7 +32,7 @@ const products = [
 
 // ForEach Basics
 let nameProvinces = names.forEach((names, index) => {
-  console.log(`${names}(${index})`);
+  console.log(`${names}(${provinces[index]})`);
 });
 console.log(nameProvinces);
 
@@ -49,4 +49,5 @@ let sortedProvinces = provinces.sort();
 console.log(sortedProvinces);
 
 // Filtering Cape
-let filteredCapes = 
+let filteredCapes = provinces.filter((province) => !province.includes("Cape"));
+console.log(filteredCapes);
