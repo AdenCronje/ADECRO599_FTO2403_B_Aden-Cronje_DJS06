@@ -12,7 +12,7 @@ const provinces = [
 const names = [
   "Ashwin",
   "Sibongile",
-  "Jan-Hendrik",
+  "JanHendrik",
   "Sifso",
   "Shailen",
   "Frikkie",
@@ -31,23 +31,38 @@ const products = [
 // Exercises
 
 // ForEach Basics
-let nameProvinces = names.forEach((names, index) => {
-  console.log(`${names}(${provinces[index]})`);
+let nameProvinces = names.forEach((name, index) => {
+   console.log(`${name}(${provinces[index]})`);
 });
-console.log(nameProvinces);
+//  console.log(nameProvinces);
 
 // Uppercase Transformation
 let uppercaseProvinces = provinces.map((provinces) => provinces.toUpperCase());
-console.log(uppercaseProvinces);
+// console.log(uppercaseProvinces);
 
 // Name Lengths
 let nameLengths = names.map((name) => name.length);
-console.log(nameLengths);
+// console.log(nameLengths);
 
 // Sorting
 let sortedProvinces = provinces.sort();
-console.log(sortedProvinces);
+// console.log(sortedProvinces);
 
 // Filtering Cape
 let filteredCapes = provinces.filter((province) => !province.includes("Cape"));
-console.log(filteredCapes);
+// console.log(filteredCapes);
+
+// Finding 'S'
+let checkForS = names.map((name) => !name.includes("s"));
+// console.log(checkForS);
+
+// Creating Object Mapping
+const arraysToObjects = names.map((name, index) => ({
+  [name]: provinces[index],
+}));
+// console.log(arraysToObjects);
+
+const convertToObject = arraysToObjects.reduce((acc, item) => {
+  return { ...acc, ...item };
+});
+console.log(convertToObject);
