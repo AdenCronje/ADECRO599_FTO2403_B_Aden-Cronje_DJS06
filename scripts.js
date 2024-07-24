@@ -18,16 +18,6 @@ const names = [
   "Frikkie",
 ];
 
-// A list of products with prices:
-const products = [
-  { product: "banana", price: "2" },
-  { product: "mango", price: 6 },
-  { product: "potato", price: " " },
-  { product: "avocado", price: "8" },
-  { product: "coffee", price: 10 },
-  { product: "tea", price: "" },
-];
-
 // Exercises
 
 // ForEach Basics
@@ -58,6 +48,7 @@ let checkForS = names.map((name) => !name.includes("s"));
 
 // Creating Object Mapping
 const arraysToObjects = names.map((name, index) => ({
+  // created new object
   [name]: provinces[index],
 }));
 // console.log(arraysToObjects);
@@ -65,4 +56,4 @@ const arraysToObjects = names.map((name, index) => ({
 const convertToObject = arraysToObjects.reduce((acc, item) => {
   return { ...acc, ...item };
 });
-console.log(convertToObject);
+// console.log(convertToObject);
