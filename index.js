@@ -22,3 +22,16 @@ let filteredProducts = shoppingItems
 console.log(filteredProducts);
 
 // Price Manipulation
+let validProducts = shoppingItems
+  .filter((product) => product.price && !isNaN(product.price))
+  .reduce((acc, product) => acc + Number(product.price), 0);
+console.log(validProducts);
+
+// Concatenate Product Names
+let allProductNames = products.reduce(
+  (acc, product) => acc + product.product + " ",
+  ""
+);
+console.log(allProductNames);
+
+// Find Extremes in Prices
